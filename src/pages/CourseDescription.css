@@ -1,0 +1,57 @@
+/* Course Page Styling */
+.course-description {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.course-intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #222;
+  margin-top: 20px;
+}
+
+.course-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.course-list li {
+  font-size: 1.1rem;
+  padding: 5px 0;
+}
+
+.course-image {
+  display: block;
+  width: 100%; /* Ensures responsive behavior */
+  max-width: 600px; /* Limits size for consistency */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image fills the area without distortion */
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.course-content {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 20px;
+}

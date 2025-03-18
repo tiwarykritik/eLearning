@@ -1,0 +1,78 @@
+.courses-container {
+  max-width: 1200px;
+  margin: auto;
+  background-color: bisque;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+body {
+  background-color: bisque !important;
+}
+
+.courses-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.courses-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Ensure all cards have the same height */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-card {
+  flex: 1;
+  min-height: 250px; /* Ensures uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space evenly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  background-color: rgb(226, 251, 217);
+  padding: 20px;
+  text-align: center;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+}
+
+.course-btn {
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  margin-top: auto; /* Pushes buttons to the bottom */
+}
+
+.course-btn:hover {
+  opacity: 0.8;
+}
+
+.btn-enrolled {
+  background-color: green; /* Example styling for enrolled courses */
+  color: white;
+}
+
