@@ -1,3 +1,4 @@
+// src/app.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
@@ -9,6 +10,7 @@ import CourseDescription from "./pages/CourseDescription";
 import Login from "./pages/Login";
 import Register from "./pages/Register"; 
 import Dashboard from "./pages/Dashboard";
+import Quiz from "./components/Quiz"; // Add this import
 
 function App() {
   return (
@@ -34,6 +36,12 @@ function App() {
           <Route path="/course/:id" element={
             <ProtectedRoute>
               <CourseDescription />
+            </ProtectedRoute>
+          } />
+          {/* Add Quiz route */}
+          <Route path="/quiz/:courseId" element={
+            <ProtectedRoute>
+              <Quiz />
             </ProtectedRoute>
           } />
         </Routes>
