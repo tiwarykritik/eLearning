@@ -47,35 +47,37 @@ const Login = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Email</label>
-          <input
-            type="email"
-            className="form-control"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
+    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: "80vh" }}>
+      <div className="card shadow p-4" style={{ width: "400px" }}>
+        <h2 className="text-center mb-4">Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
 
-        {/* Error Message (shown only if login fails) */}
-        {errorMessage && <p className="text-danger">{errorMessage}</p>}
+          {/* Error Message (shown only if login fails) */}
+          {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
-        <button type="submit" className="btn btn-primary">Login</button>
-      </form>
+          <button type="submit" className="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
 
       {/* Bootstrap Modal */}
       {showModal && (

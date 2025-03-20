@@ -88,69 +88,71 @@ const Register = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Name</label>
-          <input
-            type="text"
-            className="form-control"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Email</label>
-          <input
-            type="email"
-            className="form-control"
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-              // Add a small delay to avoid too many API calls while typing
-              if (e.target.value) {
-                setTimeout(() => checkEmailAvailability(e.target.value), 500);
-              }
-            }}
-            required
-          />
-          {isCheckingEmail && <small className="text-muted">Checking email availability...</small>}
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Confirm Password</label>
-          <input
-            type="password"
-            className="form-control"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-        </div>
+    <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+      <div className="card shadow p-4" style={{ width: "450px" }}>
+        <h2 className="text-center mb-4">Register</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Name</label>
+            <input
+              type="text"
+              className="form-control"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                // Add a small delay to avoid too many API calls while typing
+                if (e.target.value) {
+                  setTimeout(() => checkEmailAvailability(e.target.value), 500);
+                }
+              }}
+              required
+            />
+            {isCheckingEmail && <small className="text-muted">Checking email availability...</small>}
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Confirm Password</label>
+            <input
+              type="password"
+              className="form-control"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
 
-        {/* Error Message (Red Color) */}
-        {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+          {/* Error Message (Red Color) */}
+          {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
-        <button type="submit" className="btn btn-primary">Register</button>
-      </form>
+          <button type="submit" className="btn btn-primary w-100">Register</button>
+        </form>
+      </div>
 
       {/* Success Modal */}
       {showModal && (
         <div className="modal show d-block" tabIndex="-1">
           <div className="modal-dialog">
             <div className="modal-content">
-              {/* Modal Header with Bisque Background */}
+              {/* Modal Header with White Background */}
               <div className="modal-header" style={{backgroundColor:'white', color:'black'}}>
                 <h5 className="modal-title">Registration Successful</h5>
               </div>
